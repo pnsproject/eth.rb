@@ -458,8 +458,6 @@ module Eth
 
     # Prepares parameters and sends the command to the client.
     def send_command(command, args)
-      puts "==== in send_command, command: #{command.inspect}, args: #{args.inspect}"
-
       if args[0].class == Hash && args[0].has_key?(:gas_limit)
         the_hash = args[0]
         the_hash[:gas] = the_hash[:gas_limit]
